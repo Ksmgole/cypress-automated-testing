@@ -34,6 +34,7 @@ describe('Verisign Campaign Test flow 1',()=>{
             cy.contains('45930')
         })
     })
+
     it('Checking Campaign price for India ',() => {
         cy.visit('https://cc1.pvdemo.com/?desh=in')
         cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() =>{
@@ -41,6 +42,7 @@ describe('Verisign Campaign Test flow 1',()=>{
             cy.contains('₹')
             cy.contains('230')
         })
+        
         cy.visit('https://cc1.pvdemo.com/pricing/?desh=in')
         cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() =>{
             cy.contains('INR')
@@ -51,7 +53,7 @@ describe('Verisign Campaign Test flow 1',()=>{
 
     it('Checking domain in pricing section',() => {
         cy.visit('https://cc1.pvdemo.com')
-        
+
         cy.get('.pv-pricing .plan-box .pv-cta__title').contains('.cc')
         cy.visit('https://cc1.pvdemo.com/pricing')
         cy.get('.pv-section .plan-box .plan-box__list').contains('.cc')

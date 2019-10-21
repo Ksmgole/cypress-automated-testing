@@ -3,4 +3,6 @@ import ReactDOM from 'react-dom'
 import TodoApp from './components/TodoApp'
 import './styles.css'
 
+
+console.log("fuck");
 ReactDOM.render(<TodoApp />, document.getElementById('app'))
