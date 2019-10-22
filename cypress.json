@@ -1,2 +1,10 @@
 {
+    "env":{
+        "baseUrl":"pvdemo.com",
+        "verisign-cf-1":"https://cc1.",
+        "verisign-cf-2":"https://cc2.",
+        "verisign-cf-3":"https://cc3.",
+        "verisign-cf":"https://cc4."
+    }
+   
 }
