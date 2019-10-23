@@ -2,6 +2,7 @@ describe('Verisign Campaign Test flow 1',()=>{
     it('should have Promotional Sticker for Indonesia and India',() => {
         cy.visit(Cypress.env("verisign-cf-1")+ Cypress.env("baseUrl")+"/?desh=id")        
         cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indonesian_sticker.png')
+        
         cy.visit(Cypress.env("verisign-cf-1")+ Cypress.env("baseUrl")+"/?desh=in")        
         cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indian_sticker.png')
     })
