@@ -1,20 +1,20 @@
-import VerisignHelper from './VerisignHelper'
+import VerisignHelper from '../Helper/verisignHelper'
 
-var indonesiaCfUrl = Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/?desh=id",
-    indonesiaCfPricingPageUrl = Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/pricing/?desh=id",
-    indiaCfUrl = Cypress.env("verisign-cf")+ Cypress.env("baseUrl")+"/?desh=in",
-    indiaCfPricingPageUrl = Cypress.env("verisign-cf")+ Cypress.env("baseUrl")+"/pricing/?desh=in",
-    usPricingCountryCode = VerisignHelper.getUSPricingCountryCode(),
-    dollarCurrency = VerisignHelper.getDollarCurrencySymbol(),
-    usPrice = VerisignHelper.getUSPrice(),
+var indonesianCfUrl = VerisignHelper.getIndonesianCfUrl(),
+    indonesianCfPricingPageUrl=VerisignHelper.getIndonesianCfPricingPageUrl(),
+    normalPagevampTrial = VerisignHelper.getNormalPagevampTrial(),
+    usPricingCountryCode = VerisignHelper.getUsPricingCountryCode(),
+    dollarCurrencySymbol = VerisignHelper.getDollarCurrencySymbol(),
+    usPrice = VerisignHelper.getUsYearlyPrice(),
+    indianCfUrl= VerisignHelper.getIndianCfUrl(),
+    indianCfPricingPageUrl = VerisignHelper.getIndianCfPricingPageUrl(),   
     indianPricingCountryCode = VerisignHelper.getIndianPricingCountryCode(),
-    indianCurrency = VerisignHelper.getIndianCurrencySymbol(),
-    indianCfPrice = VerisignHelper.getIndianCfPrice(),
-    normalPagevampTrial = VerisignHelper.getNormalPagevampTrial();
+    indianCurrencySymbol = VerisignHelper.getIndianCurrencySymbol(),
+    indianCfPrice = VerisignHelper.getIndianCfPrice();
 
 describe('Verisign Control flow for Indonesia',()=>{
     it('should not have Promotional Sticker',() => {
-        cy.visit(indonesiaCfUrl)        
+        cy.visit(indonesianCfUrl)        
         cy.get('.pv-banner .promo-sticker').should('not.exist')
     })
     it('should have .com domain extension in index page >> feature section',() => {
@@ -24,27 +24,27 @@ describe('Verisign Control flow for Indonesia',()=>{
         cy.get('.pv-try .pv-title .pv-title__lead').contains(normalPagevampTrial)
     })
     it('should have 14 Days Trial in Pricing page',() => {
-        cy.visit(indonesiaCfPricingPageUrl)   
+        cy.visit(indonesianCfPricingPageUrl)   
         cy.get('.pv-section .pv-title').contains(normalPagevampTrial)
     })
-    it('should display $12 price in index page',() => {
-        cy.visit(indonesiaCfUrl)   
+    it('should display $12/mo price in index page',() => {
+        cy.visit(indonesianCfUrl)   
         cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() =>{
             cy.contains(usPricingCountryCode)
-            cy.contains(dollarCurrency)
+            cy.contains(dollarCurrencySymbol)
             cy.contains(usPrice)
         })
     })
-    it('should display $12 price in pricing page',() => {
-        cy.visit(indonesiaCfPricingPageUrl)   
+    it('should display $12/mo price in pricing page',() => {
+        cy.visit(indonesianCfPricingPageUrl)   
         cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() =>{
             cy.contains(usPricingCountryCode)
-            cy.contains(dollarCurrency)
+            cy.contains(dollarCurrencySymbol)
             cy.contains(usPrice)
         })
     })
     it('should have .com, .net or .org domain extensions in pricing page',() => {
-        cy.visit(indonesiaCfPricingPageUrl)   
+        cy.visit(indonesianCfPricingPageUrl)   
         cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
             cy.contains(".com")
             cy.contains(".net")
@@ -52,7 +52,7 @@ describe('Verisign Control flow for Indonesia',()=>{
         })   
     })
     it('should have Pagevamp youtube video(without 14 days trial) in "How it works >> Watch it in action" link',() => {
-        cy.visit(indonesiaCfUrl)   
+        cy.visit(indonesianCfUrl)   
         cy.get('#how-it-works-link').click()
         cy.get('.modal-content iframe.embed-responsive-item').should('have.attr', 'src', 'https://www.youtube.com/embed/DrTj9mUD2MY?enablejsapi=1')
         cy.get('#how-it-works-section a.link').click().invoke('css','display', 'block')
@@ -62,7 +62,7 @@ describe('Verisign Control flow for Indonesia',()=>{
 
 describe('Verisign Control flow for India',()=>{
     it('should not have Promotional Sticker',() => {
-        cy.visit(indiaCfUrl)  
+        cy.visit(indianCfUrl)  
         cy.get('.pv-banner .promo-sticker').should('not.exist')
     })
     it('should have .com domain extension in index page >> feature section',() => {
@@ -72,22 +72,22 @@ describe('Verisign Control flow for India',()=>{
         cy.get('.pv-try .pv-title .pv-title__lead').contains(normalPagevampTrial)
     })
     it('should have 14 Days Trial in Pricing page',() => {
-        cy.visit(indiaCfPricingPageUrl)   
+        cy.visit(indianCfPricingPageUrl)   
         cy.get('.pv-section .pv-title').contains(normalPagevampTrial)
     })
-    it('should display ₹850 price in index page',() => {
-        cy.visit(indiaCfUrl)   
+    it('should display ₹850/mo price in index page',() => {
+        cy.visit(indianCfUrl)   
         cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() =>{
             cy.contains(indianPricingCountryCode)
-            cy.contains(indianCurrency)
+            cy.contains(indianCurrencySymbol)
             cy.contains(indianCfPrice)
         })
     })
-    it('should display ₹850 price in pricing page',() => {
-        cy.visit(indiaCfPricingPageUrl)   
+    it('should display ₹850/mo price in pricing page',() => {
+        cy.visit(indianCfPricingPageUrl)   
         cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() =>{
             cy.contains(indianPricingCountryCode)
-            cy.contains(indianCurrency)
+            cy.contains(indianCurrencySymbol)
             cy.contains(indianCfPrice)
         })
     })
@@ -100,7 +100,7 @@ describe('Verisign Control flow for India',()=>{
         })
     })
     it('should have Pagevamp youtube video(without 14 days trial) in "How it works >> Watch it in action" link',() => {
-        cy.visit(indiaCfUrl)  
+        cy.visit(indianCfUrl)  
         cy.get('#how-it-works-link').click()
         cy.get('.modal-content iframe.embed-responsive-item').should('have.attr', 'src', 'https://www.youtube.com/embed/DrTj9mUD2MY?enablejsapi=1')
         cy.get('#how-it-works-section a.link').click().invoke('css','display', 'block')
