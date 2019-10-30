@@ -5,6 +5,10 @@ class akkyHelper {
     static getAkkyPricingPageUrl(){
         return("https://"+ Cypress.env("baseUrl")+"/akky/pricing")
     }
+    static getNormalPagevampTrial()
+    {
+        return '14';
+    }
     static getUsPricingCountryCode(){
             return 'US';
     }
