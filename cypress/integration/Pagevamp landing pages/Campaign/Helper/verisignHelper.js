@@ -8,7 +8,7 @@ class VerisignHelper {
             return 'Rp';
     }
     static getIndonesianCampaignPrice(){
-            return '45930';
+            return '551.160';
     }
     static getIndonesianCfUrl(){
             return (Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/?desh=id");
@@ -66,13 +66,13 @@ class VerisignHelper {
     {
             return '₹';
     }
-    static getIndianCfPrice()
-    {
-            return '850';
-    }
+//     static getIndianCfPrice()
+//     {
+//             return '850';
+//     }
     static getIndianTfPrice()
     {
-            return '230';
+            return '2,760';
     }
     static getUsPricingCountryCode()
     {
@@ -82,14 +82,14 @@ class VerisignHelper {
     {
             return '$';
     }
-    static getUsYearlyPrice()
-    {
-        return '12';
-    }
-    static getNormalPagevampTrial()
-    {
-        return '14';
-    }
+//     static getUsYearlyPrice()
+//     {
+//         return '12';
+//     }
+//     static getNormalPagevampTrial()
+//     {
+//         return '14';
+//     }
     static getVerisignTrial()
     {
         return '5';
