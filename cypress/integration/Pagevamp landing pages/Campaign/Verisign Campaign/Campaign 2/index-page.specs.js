@@ -33,7 +33,7 @@ describe('Verisign Campaign Testflow 2 -Index page for Indonesia',()=>{
                 cy.contains('73% Diskon')
             })
         })
-        it('should display price IDR Rp 45930/mo', () => {
+        it('should display price IDRRp551.160', () => {
             cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndonesianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndonesianCurrencySymbol())
@@ -72,7 +72,7 @@ describe('Verisign Campaign Testflow 2 - Index page for India',()=>{
                 cy.contains('73% discount')
             })
         })
-        it('should display price ₹230/mo', () => {
+        it('should display price ₹2,760', () => {
             cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndianCurrencySymbol())

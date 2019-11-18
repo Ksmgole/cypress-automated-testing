@@ -21,10 +21,9 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
         it('should have Promotional Sticker', () => {
             cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indonesian_sticker.png')
         })
-        it('should have .cc domain extension in feature section', () => {
-            cy.get('.container .pv-cnt--sec .domain-cc img').should('have.attr', 'src').should('include', '/images/cc.svg')
+        it('should have .com domain extension in feature', () => {
+            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
         })
-
         it('should have 5 Days Trial', () => {
             cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
         })
@@ -35,7 +34,7 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
                 cy.contains('73% Diskon')
             })
         })
-        it('should display price IDR Rp 45930/mo', () => {
+        it('should display price IDRRp551.160', () => {
             cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndonesianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndonesianCurrencySymbol())
@@ -62,8 +61,8 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
         it('should have Promotional Sticker', () => {
             cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indian_sticker.png')
         })
-        it('should have .cc domain extension in feature section', () => {
-            cy.get('.container .pv-cnt--sec .domain-cc img').should('have.attr', 'src').should('include', '/images/cc.svg')
+        it('should have .com domain extension in feature', () => {
+            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
         })
         it('should have 5 Days Trial', () => {
             cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
@@ -74,7 +73,7 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
                 cy.contains('73% discount')
             })
         })
-        it('should display price ₹230/mo', () => {
+        it('should display price ₹2,760', () => {
             cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndianCurrencySymbol())
