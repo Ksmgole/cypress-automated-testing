@@ -10,6 +10,48 @@ class VerisignHelper {
     static getIndonesianCampaignPrice(){
             return '551.160';
     }
+    static getIndianPricingCountryCode()
+    {
+            return 'INR';
+    }
+    static getIndianCurrencySymbol()
+    {
+            return '₹';
+    }
+    static getIndianCfPrice()
+    {
+            return '850';
+    }
+    static getIndianTfPrice()
+    {
+            return '2,760';
+    }
+        static getUsYearlyPrice()
+    {
+        return '12';
+    }
+    static getNormalPagevampTrial()
+    {
+        return '14';
+    }
+    static getVerisignTrial()
+    {
+        return '5';
+    }
+    static getPagevampPriceForIndonesia(){
+        return 'Rp 2.041.333 / tahun';
+    }
+    static getPagevampPriceForIndia(){
+        return '₹ 10,222 / year';
+    }
+    static getUsPricingCountryCode()
+    {
+            return 'US';
+    }
+    static getDollarCurrencySymbol()
+    {
+            return '$';
+    }
     static getIndonesianCfUrl(){
             return (Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/?desh=id");
     }
@@ -57,42 +99,6 @@ class VerisignHelper {
     }
     static getIndianTfcPricingPageUrl(){
         return(Cypress.env("verisign-cf-3")+ Cypress.env("baseUrl")+"/pricing/?desh=in");
-    }
-    static getIndianPricingCountryCode()
-    {
-            return 'INR';
-    }
-    static getIndianCurrencySymbol()
-    {
-            return '₹';
-    }
-//     static getIndianCfPrice()
-//     {
-//             return '850';
-//     }
-    static getIndianTfPrice()
-    {
-            return '2,760';
-    }
-    static getUsPricingCountryCode()
-    {
-            return 'US';
-    }
-    static getDollarCurrencySymbol()
-    {
-            return '$';
-    }
-//     static getUsYearlyPrice()
-//     {
-//         return '12';
-//     }
-//     static getNormalPagevampTrial()
-//     {
-//         return '14';
-//     }
-    static getVerisignTrial()
-    {
-        return '5';
     }
    
 }

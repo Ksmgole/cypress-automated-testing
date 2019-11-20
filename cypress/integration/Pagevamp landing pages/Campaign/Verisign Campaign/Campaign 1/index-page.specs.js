@@ -28,10 +28,12 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
             cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
         })
 
-        it('should have promotional 73% discount sticker in pricing box', () => {
+        it('should have promotional 73% discount on Rp 2.041.333 / tahun in pricing box', () => {
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
                 cy.contains('PROMOSI')
-                cy.contains('73% Diskon')
+                cy.contains('diskon 73% di')
+                cy.contains(VerisignHelper.getPagevampPriceForIndonesia())
+
             })
         })
         it('should display price IDRRp551.160', () => {
@@ -67,10 +69,11 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
         it('should have 5 Days Trial', () => {
             cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
         })
-        it('should have promotional 73% discount sticker in pricing box', () => {
+        it('should have promotional with 73% discount on ₹ 10,222/year in pricing box', () => {
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
                 cy.contains('Promotional')
-                cy.contains('73% discount')
+                cy.contains('73% discount on')
+                cy.contains(VerisignHelper.getPagevampPriceForIndia())
             })
         })
         it('should display price ₹2,760', () => {
