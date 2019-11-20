@@ -5,7 +5,7 @@ class Pagevamp {
         return (url);
     }
     static getPagevampUrl(){
-        return("https://"+ Cypress.env("baseUrl"))
+        return("https://"+ Cypress.env("appUrl"))
     }
 }
 export default Pagevamp;
