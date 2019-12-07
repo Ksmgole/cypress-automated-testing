@@ -3,8 +3,8 @@ import Pagevamp from "./functions.spec"
     describe('Pagevamp Vampflow in Desktop',()=>{
 
         beforeEach(() => {
-            window.localStorage.setItem("pvpreview.access_token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnB2ZGVtby5jb21cL2p1c3QtbG9naW4iLCJpYXQiOjE1NzQ3NjU2MDgsImV4cCI6MTU3NDc3MjgwOCwibmJmIjoxNTc0NzY1NjA4LCJqdGkiOiJNUldldG1TMUl0ZncweWNSIiwic3ViIjoxMDcsInBydiI6IjcyY2Y4Njg4NzY4MjkwYTVjZTUyMGZkODE1ZmY3YTBjMTg5YjBiMDgifQ.NTi4BgmDAw2ptw7i2P9Vg3Dvcw2xD0L5Tr5RCsOaj4Y");
-            cy.visit("https://app.pvdemo.com/setup/select-page");
+            window.localStorage.setItem("pvpreview.access_token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnB2ZGVtby5jb21cL2p1c3QtbG9naW4iLCJpYXQiOjE1NzU3MzE2ODYsImV4cCI6MTU3NTczODg4NiwibmJmIjoxNTc1NzMxNjg2LCJqdGkiOiJRQkg1R29wVjFzcTVocE43Iiwic3ViIjoxMjIsInBydiI6IjcyY2Y4Njg4NzY4MjkwYTVjZTUyMGZkODE1ZmY3YTBjMTg5YjBiMDgifQ.sCu3bAgGPnNwiBgurOqcQsKMxvg19S5UJ9mBAY9wnew");
+            cy.visit(Pagevamp.getSelectPageUrl());
             cy.get(':nth-child(1) > .media').click();
             cy.get('.btn').click();
             cy.get('#input_29').type('666666666');
