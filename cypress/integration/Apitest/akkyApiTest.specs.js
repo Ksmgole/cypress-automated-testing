@@ -1,20 +1,20 @@
-import { AssertionError } from "assert";
+import akkyApiHelper from './akkyApiHelper'
 
 describe('Akky Api Testing',()=>{
 
     before(function() {
-        cy.request("https://api.pvdemo.com/delete/275727663294286/truncate?code=jokerisbetterthanbatman")
+        cy.request(akkyApiHelper.getDeletePageUrl())
     });
 
     it('Akky Subscription Create API',()=>{
         cy.request({
             method: 'POST',
-            url: 'https://api.pvdemo.com/reseller/subscriptions/',
+            url: akkyApiHelper.getSubscriptionCreateApiUrl(),
             body: {
-                apiKey: 'kusum',
-                apiSecret: 'kusum',
-                plan: '1',
-                facebookPageUrl: 'https://www.facebook.com/BeautySpa-275727663294286'
+                apiKey: akkyApiHelper.getApiKey(),
+                apiSecret: akkyApiHelper.getApiSecret(),
+                plan: akkyApiHelper.getAkkyYearlyPlan(),
+                facebookPageUrl: akkyApiHelper.getFacebookPageUrl()
             },
         }).then((response)=> {
             var message = response.body.message,
@@ -24,8 +24,8 @@ describe('Akky Api Testing',()=>{
 
             assert.equal(message,"Subscription successfully created")
             assert.equal(httpCode,"200")
+            assert.equal(url,akkyApiHelper.getLandingPageUrl()+"/?trk_code="+akkyApiHelper.getAkkyTrackingCode()+"&fbid="+akkyApiHelper.getPageId())
             cy.log(code)
-            assert.equal(url,"https://pvdemo.com/?trk_code=zsjnb8G&fbid=275727663294286")
         })
     });
 })

@@ -1,7 +1,9 @@
 {
   "env": {
     "baseUrl": "pagevamp.com",
-    "appUrl":"app.pvdemo.com/setup/select-page",
+    "baseStaginUrl": "https://pvdemo.com",
+    "appUrl":"https://app.pvdemo.com",
+    "apiUrl":"https://api.pvdemo.com",
     "verisign-cf-1": "https://tfa.",
     "verisign-cf-2": "https://tfb.",
     "verisign-cf-3": "https://tfc.",
