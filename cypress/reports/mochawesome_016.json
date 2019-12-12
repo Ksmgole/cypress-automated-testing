@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-12-12T15:26:10.659Z",
+    "end": "2019-12-12T15:26:27.029Z",
+    "duration": 16370,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "35676485-b975-4095-ad94-eb7bdaece689",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1aebe937-70e2-46c3-b287-2a1a48622619",
+          "title": "Pagevamp Vampflow in Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should take to Demo page, if user clicks \"Skip\" in domain setup page",
+              "fullTitle": "Pagevamp Vampflow in Desktop should take to Demo page, if user clicks \"Skip\" in domain setup page",
+              "timedOut": null,
+              "duration": 11887,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn-warning').click();\ncy.get('.modal-footer > .row > .text-right > .btn').click();\ncy.url().should('include', '/demo');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: ':nth-child(1) > .media', but never found it.\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Pagevamp Vampflow in Desktop'",
+                "estack": "CypressError: Timed out retrying: Expected to find element: ':nth-child(1) > .media', but never found it.\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Pagevamp Vampflow in Desktop'\n    at Object.cypressErr (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:105249:17)\n    at retry (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:96526:16)\n    at onFailFn (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:85591:16)\n    at tryCatcher (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:137520:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:134132:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:134142:10)\n    at Async.drainQueues (https://app.pvdemo.com/__cypress/runner/cypress_runner.js:134016:14)",
+                "diff": null
+              },
+              "uuid": "0f1228a6-dcfa-4615-baa3-71c42f8b55a2",
+              "parentUUID": "1aebe937-70e2-46c3-b287-2a1a48622619",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should take to Demo page, if user choose custom domain and click \"Next\"",
+              "fullTitle": "Pagevamp Vampflow in Desktop should take to Demo page, if user choose custom domain and click \"Next\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn-success > .ng-binding').click();\ncy.url().should('include', '/demo');",
+              "err": {},
+              "uuid": "29d23b83-0510-4207-bb48-8f5f3097dca5",
+              "parentUUID": "1aebe937-70e2-46c3-b287-2a1a48622619",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should take to Demo page, if user choose sub-domain and click \"Next\"",
+              "fullTitle": "Pagevamp Vampflow in Desktop should take to Demo page, if user choose sub-domain and click \"Next\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section.vamp-content .panel-group').eq(1).click();\ncy.get('.btn-success > .ng-binding').click();\ncy.url().should('include', '/demo');",
+              "err": {},
+              "uuid": "e452895e-b3b1-424a-b0b0-e184734edf9e",
+              "parentUUID": "1aebe937-70e2-46c3-b287-2a1a48622619",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should take to Demo page, if user choose link domain and click \"Next\"",
+              "fullTitle": "Pagevamp Vampflow in Desktop should take to Demo page, if user choose link domain and click \"Next\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section.vamp-content .panel-group').eq(1).click();\ncy.get('.btn-success > .ng-binding').click();\ncy.url().should('include', '/demo');",
+              "err": {},
+              "uuid": "bfff6d9d-d398-4802-b5ce-10d8b3786bb0",
+              "parentUUID": "1aebe937-70e2-46c3-b287-2a1a48622619",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0f1228a6-dcfa-4615-baa3-71c42f8b55a2"
+          ],
+          "pending": [],
+          "skipped": [
+            "29d23b83-0510-4207-bb48-8f5f3097dca5",
+            "e452895e-b3b1-424a-b0b0-e184734edf9e",
+            "bfff6d9d-d398-4802-b5ce-10d8b3786bb0"
+          ],
+          "duration": 11887,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}
