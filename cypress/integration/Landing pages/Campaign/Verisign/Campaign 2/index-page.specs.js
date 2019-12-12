@@ -1,8 +1,8 @@
-import VerisignHelper from '../../Helper/verisignHelper'
+import VerisignHelper from '../verisignHelper'
 
 let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
 
-describe('Verisign Campaign Testflow 3 -Index page for Indonesia',()=>{
+describe('Verisign Campaign Testflow 2 -Index page for Indonesia',()=>{
 
     sizes.forEach((size) => {
 
@@ -12,7 +12,7 @@ describe('Verisign Campaign Testflow 3 -Index page for Indonesia',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndonesianTfcUrl());
+            cy.visit(VerisignHelper.getIndonesianTfbUrl());
         });
 
         it('testing on '+size, () => {
@@ -44,7 +44,7 @@ describe('Verisign Campaign Testflow 3 -Index page for Indonesia',()=>{
     });
 })
 
-describe('Verisign Campaign Testflow 3 - Index page for India',()=>{
+describe('Verisign Campaign Testflow 2 - Index page for India',()=>{
 
     sizes.forEach((size) => {
         before(function() {
@@ -53,7 +53,7 @@ describe('Verisign Campaign Testflow 3 - Index page for India',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndianTfcUrl());
+            cy.visit(VerisignHelper.getIndianTfbUrl());
         });
 
         it('testing on '+size, () => {
