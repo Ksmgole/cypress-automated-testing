@@ -2,8 +2,8 @@
 describe('Pagevamp Vampflow in mobile',()=>{
 
         before(function() {
-            window.localStorage.setItem("pvpreview.access_token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnBhZ2V2YW1wLmNvbVwvanVzdC1sb2dpbiIsImlhdCI6MTU3NTM4OTI1OSwiZXhwIjoxNTc1Mzk2NDU5LCJuYmYiOjE1NzUzODkyNTksImp0aSI6InlVYnRXTGxBZ1NFYm1vVjEiLCJzdWIiOjUyMDM2LCJwcnYiOiI3MmNmODY4ODc2ODI5MGE1Y2U1MjBmZDgxNWZmN2EwYzE4OWIwYjA4In0.W40FmpsE0hjwfTKIsEsjvuEIArCRjsRp1ZhiqaH4C1I");
-            cy.visit("https://app.pagevamp.com/account/1422199391384377/sites");
+            cy.login()
+            cy.visit("https://app.pagevamp.pv/account/1422199391384377/sites");
             cy.wait(60000)
         });
         it('checking Spanish Translation',()=>{
@@ -76,5 +76,5 @@ describe('Pagevamp Vampflow in mobile',()=>{
             cy.get('.language > .dropdown > .uib-dropdown-menu > :nth-child(15) > .ng-binding').click()
             cy.get('.aligning-center').contains('Mes sites')
         });
-       
+
 });
