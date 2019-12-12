@@ -1,8 +1,8 @@
-import VerisignHelper from '../../Helper/verisignHelper'
+import VerisignHelper from '../verisignHelper'
 
 let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
 
-describe('Verisign Campaign Testflow 1 - Pricing page for Indonesia',()=>{
+describe('Verisign Campaign Testflow 3 - Pricing page for Indonesia',()=>{
 
     sizes.forEach((size) => {
 
@@ -12,7 +12,7 @@ describe('Verisign Campaign Testflow 1 - Pricing page for Indonesia',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndonesianTfaPricingPageUrl());
+            cy.visit(VerisignHelper.getIndonesianTfcPricingPageUrl());
         });
 
         it('testing on '+size, () => {
@@ -47,7 +47,7 @@ describe('Verisign Campaign Testflow 1 - Pricing page for Indonesia',()=>{
     });
 })
 
-describe('Verisign Campaign Testflow 1- Pricing page for India',()=>{
+describe('Verisign Campaign Testflow 3- Pricing page for India',()=>{
 
     sizes.forEach((size) => {
         before(function() {
@@ -56,7 +56,7 @@ describe('Verisign Campaign Testflow 1- Pricing page for India',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndianTfaPricingPageUrl());
+            cy.visit(VerisignHelper.getIndianTfcPricingPageUrl());
         });
 
         it('testing on '+size, () => {
@@ -79,7 +79,7 @@ describe('Verisign Campaign Testflow 1- Pricing page for India',()=>{
                 cy.contains(VerisignHelper.getPagevampPriceForIndia())
             })
         })
-        it('should display price  ₹2,760', () => {
+        it('should display price ₹2,760', () => {
             cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndianCurrencySymbol())

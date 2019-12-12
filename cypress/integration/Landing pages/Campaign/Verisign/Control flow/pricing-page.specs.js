@@ -1,8 +1,8 @@
-import VerisignHelper from '../../Helper/verisignHelper'
+import VerisignHelper from '../verisignHelper'
 
 let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
 
-describe('Verisign Campaign Control Flow -Index page for Indonesia',()=>{
+describe('Verisign Campaign Control Flow - Pricing page for Indonesia',()=>{
 
     sizes.forEach((size) => {
 
@@ -12,20 +12,21 @@ describe('Verisign Campaign Control Flow -Index page for Indonesia',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndonesianCfUrl());
+            cy.visit(VerisignHelper.getIndonesianCfPricingPageUrl());
         });
 
         it('testing on '+size, () => {
 
         })
-        it('should not have Promotional Sticker', () => {
-            cy.get('.pv-banner .promo-sticker').should('not.exist')
-        })
-        it('should have .com domain extension in feature', () => {
-            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
-        })
         it('should have 14 Days Trial', () => {
-            cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getNormalPagevampTrial())
+            cy.get('.pv-section .pv-title').contains(VerisignHelper.getNormalPagevampTrial())
+        })
+        it('should have .com, .net, or .org domain extensions',() => {
+            cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
+                cy.contains(".com")
+                cy.contains(".net")
+                cy.contains(".org")
+            })
         })
         it('should display price US $12/mo', () => {
             cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
@@ -37,7 +38,7 @@ describe('Verisign Campaign Control Flow -Index page for Indonesia',()=>{
     });
 })
 
-describe('Verisign Campaign Control Flow - Index page for India',()=>{
+describe('Verisign Campaign Control Flow- Pricing page for India',()=>{
 
     sizes.forEach((size) => {
         before(function() {
@@ -46,19 +47,20 @@ describe('Verisign Campaign Control Flow - Index page for India',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndianCfUrl());
+            cy.visit(VerisignHelper.getIndianCfPricingPageUrl());
         });
 
         it('testing on '+size, () => {
         })
-        it('should not have Promotional Sticker', () => {
-            cy.get('.pv-banner .promo-sticker').should('not.exist')
-        })
-        it('should have .com domain extension in feature', () => {
-            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
-        })
         it('should have 14 Days Trial', () => {
-            cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getNormalPagevampTrial())
+            cy.get('.pv-section .pv-title').contains(VerisignHelper.getNormalPagevampTrial())
+        })
+        it('should have .com, .net, or .org domain extensions',() => {
+            cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
+                cy.contains(".com")
+                cy.contains(".net")
+                cy.contains(".org")
+            })
         })
         it('should display price ₹850/mo', () => {
             cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {

@@ -1,8 +1,8 @@
-import VerisignHelper from '../../Helper/verisignHelper'
+import VerisignHelper from '../verisignHelper'
 
 let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
 
-describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
+describe('Verisign Campaign Testflow 1 - Pricing page for Indonesia',()=>{
 
     sizes.forEach((size) => {
 
@@ -12,22 +12,23 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndonesianTfaUrl());
+            cy.visit(VerisignHelper.getIndonesianTfaPricingPageUrl());
         });
 
         it('testing on '+size, () => {
 
         })
-        it('should have Promotional Sticker', () => {
-            cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indonesian_sticker.png')
-        })
-        it('should have .com domain extension in feature', () => {
-            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
-        })
         it('should have 5 Days Trial', () => {
-            cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
+            cy.get('.pv-section h1.pv-title').contains(VerisignHelper.getVerisignTrial())
         })
-
+        it('should have .com, .net, .org or .cc domain extensions',() => {
+            cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
+                cy.contains(".com")
+                cy.contains(".net")
+                cy.contains(".org")
+                cy.contains(".cc")
+            })
+        })
         it('should have promotional 73% discount on Rp 2.041.333 / tahun in pricing box', () => {
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
                 cy.contains('PROMOSI')
@@ -37,7 +38,7 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
             })
         })
         it('should display price IDRRp551.160', () => {
-            cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
+            cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndonesianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndonesianCurrencySymbol())
                 cy.contains(VerisignHelper.getIndonesianCampaignPrice())
@@ -46,7 +47,7 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
     });
 })
 
-describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
+describe('Verisign Campaign Testflow 1- Pricing page for India',()=>{
 
     sizes.forEach((size) => {
         before(function() {
@@ -55,19 +56,21 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndianTfaUrl());
+            cy.visit(VerisignHelper.getIndianTfaPricingPageUrl());
         });
 
         it('testing on '+size, () => {
         })
-        it('should have Promotional Sticker', () => {
-            cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indian_sticker.png')
-        })
-        it('should have .com domain extension in feature', () => {
-            cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
-        })
         it('should have 5 Days Trial', () => {
-            cy.get('.pv-try .pv-title .pv-title__lead').contains(VerisignHelper.getVerisignTrial())
+            cy.get('.pv-section h1.pv-title').contains(VerisignHelper.getVerisignTrial())
+        })
+        it('should have .com, .net, .org or .cc domain extensions',() => {
+            cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
+                cy.contains(".com")
+                cy.contains(".net")
+                cy.contains(".org")
+                cy.contains(".cc")
+            })
         })
         it('should have promotional with 73% discount on ₹ 10,222/year in pricing box', () => {
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
@@ -76,8 +79,8 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
                 cy.contains(VerisignHelper.getPagevampPriceForIndia())
             })
         })
-        it('should display price ₹2,760', () => {
-            cy.get('.pv-section .plan-box--promotion h2.plan-box__pricing').within(() => {
+        it('should display price  ₹2,760', () => {
+            cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
                 cy.contains(VerisignHelper.getIndianPricingCountryCode())
                 cy.contains(VerisignHelper.getIndianCurrencySymbol())
                 cy.contains(VerisignHelper.getIndianTfPrice())
