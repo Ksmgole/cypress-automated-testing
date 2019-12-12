@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aec6e54-14c4-4d22-909d-7f69aed9c535" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.specs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-control-flow.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-control-flow.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/videos/Pagevamp landing pages/Campaign/Helper/akkyHelper.js.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/videos/Pagevamp landing pages/Campaign/Helper/verisignHelper.js.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/videos/Pagevamp landing pages/Campaign/Verisign Campaign/Campaign 1/index-page.specs.js.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/videos/Pagevamp landing pages/Campaign/akky.spec.js.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,59 +37,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
-              <folding>
-                <element signature="e#3539#6038#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Helper/verisignHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-2.spec.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-control-flow.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="61" selection-start-line="61" selection-end-line="109" />
-              <folding>
-                <element signature="e#2979#5103#0" />
-              </folding>
+            <state relative-caret-position="251">
+              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.specs.js">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+            <state relative-caret-position="232">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/fixtures/example.json">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress.json">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/fixtures/example.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -82,17 +84,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-3.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1696" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/akky.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-972" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -109,16 +102,8 @@
         <option value="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js" />
         <option value="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.js" />
         <option value="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.specs.js" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/cypress-automated-testing.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -133,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,97 +130,29 @@
               <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
               <item name="cypress" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="fixtures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagevamp landing pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagevamp landing pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Campaign" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagevamp landing pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Campaign" type="462c0819:PsiDirectoryNode" />
-              <item name="Verisign Campaign" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagevamp landing pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Campaign" type="462c0819:PsiDirectoryNode" />
-              <item name="Verisign Campaign" type="462c0819:PsiDirectoryNode" />
-              <item name="Campagn 1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="cypress" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagevamp landing pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Normal Pagevamp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cypress-automated-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cypress-automated-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/India" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/India" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/India" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,17 +179,18 @@
       <updated>1571844572415</updated>
       <workItem from="1571844574069" duration="1733000" />
       <workItem from="1572289616701" duration="3698000" />
+      <workItem from="1576143697282" duration="572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5431000" />
+    <option name="totallyTimeSpent" value="6003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="27" width="1872" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25520262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -288,7 +205,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25470653" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.57918054" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -310,66 +227,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/VerisignHelper.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-3.spec.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-2.spec.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-control-flow.spec.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.specs.js" />
     <entry file="file://$PROJECT_DIR$/cypress/fixtures/example.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/VerisignHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Normal Pagevamp/italy.spec.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-3.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1696" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/akky.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-2.spec.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Normal Pagevamp/italy.spec.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-control-flow.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="61" selection-start-line="61" selection-end-line="109" />
-          <folding>
-            <element signature="e#2979#5103#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/akky.spec.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Helper/verisignHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        <state relative-caret-position="251">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/verisign-test-flow-1.spec.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="e#3539#6038#0" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/Pagevamp landing pages/Campaign/Verisign Campaign/Campagn 1/index-page.specs.js">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="232">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
         </state>
       </provider>
     </entry>
