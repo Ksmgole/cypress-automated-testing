@@ -1,11 +1,17 @@
 {
   "env": {
     "baseUrl": "pagevamp.com",
-    "appUrl":"app.pvdemo.com/setup/select-page",
     "verisign-cf-1": "https://tfa.",
     "verisign-cf-2": "https://tfb.",
     "verisign-cf-3": "https://tfc.",
     "verisign-cf": "https://cf."
   },
-  "projectId": "xyzgvv"
+  "projectId": "xyzgvv",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 }

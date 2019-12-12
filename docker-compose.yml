@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  testcypress:
+    build: .
+    container_name: testcypress
+    volumes:
+      - .:/app
