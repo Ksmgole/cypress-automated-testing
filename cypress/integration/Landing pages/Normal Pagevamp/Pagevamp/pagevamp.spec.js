@@ -1,4 +1,4 @@
-import pagevampHelper from './Helper/pvHelper'
+import pagevampHelper from '../pvHelper'
 
 let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
 
