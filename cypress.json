@@ -1,7 +1,8 @@
 {
   "env": {
     "baseUrl": "pagevamp.com",
-    "apiUrl" : "https://api.pagevamp.pv/",
+    "appUrl":"https://app.pagevamp.com",
+    "apiUrl" : "https://api.pagevamp.com/",
     "test_users_id": "51131",
     "verisign-cf-1": "https://tfa.",
     "verisign-cf-2": "https://tfb.",

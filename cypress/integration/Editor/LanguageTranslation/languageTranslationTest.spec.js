@@ -1,9 +1,10 @@
+import Pagevamp from "./helperFunctions";
 
 describe('Pagevamp Vampflow in mobile',()=>{
 
         before(function() {
             cy.login()
-            cy.visit("https://app.pagevamp.pv/account/1422199391384377/sites");
+            cy.visit(Pagevamp.getPagevampSitesUrl());
             cy.wait(60000)
         });
         it('checking Spanish Translation',()=>{
