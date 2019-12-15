@@ -23,3 +23,14 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login",function () {
+    cy.request({
+        url : Cypress.env("apiUrl")+"cypress/users/token/"+Cypress.env('test_users_id'),
+        method :"GET"
+    }).then(function (res) {
+        if(res.body.access_token !== undefined && res.body.access_token) {
+            window.localStorage.setItem("pvpreview.access_token",res.body.access_token);
+        }
+    })
+});
