@@ -1,10 +1,10 @@
-
 class Pagevamp {
-    static deleteUser(){
-        var url = "https://api.pvdemo.com/delete/users/507832912916578/truncate?code=jokerisbetterthanbatman"
-        return (url);
+    static deletePage()
+    {
+        return(Cypress.env("apiUrl")+"/delete/110017313828873/truncate?code=jokerisbetterthanbatman");
     }
-    static getSelectPageUrl(){
+    static getSelectPageUrl()
+    {
         return(Cypress.env("appUrl")+"/setup/select-page")
     }
 }

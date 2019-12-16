@@ -3,8 +3,10 @@ import Pagevamp from "./functions"
     describe('Pagevamp Vampflow in Desktop',()=>{
 
         beforeEach(() => {
-            window.localStorage.setItem("pvpreview.access_token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnB2ZGVtby5jb21cL2p1c3QtbG9naW4iLCJpYXQiOjE1NzYyMTY2MTYsImV4cCI6MTU3NjIyMzgxNiwibmJmIjoxNTc2MjE2NjE2LCJqdGkiOiJmUklJeUFIMVFSWjByQlV0Iiwic3ViIjoxMjcsInBydiI6IjcyY2Y4Njg4NzY4MjkwYTVjZTUyMGZkODE1ZmY3YTBjMTg5YjBiMDgifQ.d0DRHqLXCdBv0DqPaVik3jgD244o1wg9wzeoGAREDAQ");
+            cy.login();
+            cy.request(Pagevamp.deletePage());
             cy.visit(Pagevamp.getSelectPageUrl());
+            cy.wait(15000);
             cy.get(':nth-child(1) > .media').click();
             cy.get('.btn').click();
             cy.get('#input_29').type('666666666');
