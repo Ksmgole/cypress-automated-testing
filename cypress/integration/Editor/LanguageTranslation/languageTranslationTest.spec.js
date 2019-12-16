@@ -1,6 +1,6 @@
 import Pagevamp from "./helperFunctions";
 
-describe('Pagevamp Vampflow in mobile',()=>{
+describe('Pagevamp Admin Language Translation',()=>{
 
         before(function() {
             cy.login()

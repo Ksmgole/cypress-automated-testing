@@ -25,7 +25,6 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("login",function () {
-    console.log("this is fuck");
     cy.request({
         url : Cypress.env("apiUrl")+"cypress/users/token/"+Cypress.env('test_users_id'),
         method :"GET"
