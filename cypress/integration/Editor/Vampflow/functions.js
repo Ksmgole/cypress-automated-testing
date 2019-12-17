@@ -1,11 +1,7 @@
-
 class Pagevamp {
-    static deleteUser(){
-        var url = "https://api.pvdemo.com/delete/users/507832912916578/truncate?code=jokerisbetterthanbatman"
-        return (url);
-    }
-    static getSelectPageUrl(){
-        return(Cypress.env("appUrl")+"/setup/select-page")
+    static getAccountConfirmationUrl()
+    {
+        return(Cypress.env("appUrl")+"setup/account-confirmation?pageId=110017313828873")
     }
 }
 export default Pagevamp;
