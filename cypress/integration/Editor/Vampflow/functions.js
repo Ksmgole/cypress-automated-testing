@@ -1,11 +1,7 @@
 class Pagevamp {
-    static deletePage()
+    static getAccountConfirmationUrl()
     {
-        return(Cypress.env("apiUrl")+"/delete/110017313828873/truncate?code=jokerisbetterthanbatman");
-    }
-    static getSelectPageUrl()
-    {
-        return(Cypress.env("appUrl")+"/setup/select-page")
+        return(Cypress.env("appUrl")+"setup/account-confirmation?pageId=110017313828873")
     }
 }
 export default Pagevamp;
