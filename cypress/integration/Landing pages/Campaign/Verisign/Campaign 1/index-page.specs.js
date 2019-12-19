@@ -1,6 +1,6 @@
 import VerisignHelper from '../verisignHelper'
 
-let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
+let sizes = ['iphone-6', 'ipad-2',[1500,1000]];
 
 describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
 
@@ -8,14 +8,14 @@ describe('Verisign Campaign Testflow 1- Index page for Indonesia',()=>{
 
         before(function() {
             if (Cypress._.isArray(size)) {
-                cy.viewport(size[0], size[1])
+                cy.viewport(size[0], size[1], size[2])
             } else {
                 cy.viewport(size)
             }
             cy.visit(VerisignHelper.getIndonesianTfaUrl());
         });
 
-        it('testing on '+size, () => {
+        it('Testing on devices >> '+size, () => {
 
         })
         it('should have Promotional Sticker', () => {
@@ -51,14 +51,14 @@ describe('Verisign Campaign Testflow 1 - Index page for India',()=>{
     sizes.forEach((size) => {
         before(function() {
             if (Cypress._.isArray(size)) {
-                cy.viewport(size[0], size[1])
+                cy.viewport(size[0], size[1], size[2])
             } else {
                 cy.viewport(size)
             }
             cy.visit(VerisignHelper.getIndianTfaUrl());
         });
 
-        it('testing on '+size, () => {
+        it('Testing on devices >>  '+size, () => {
         })
         it('should have Promotional Sticker', () => {
             cy.get('.pv-banner .promo-sticker img').should('have.attr', 'src', '/images/indian_sticker.png')

@@ -22,8 +22,6 @@ describe('Sites listing test', () => {
     });
 
     it('Click create a new site button', () => {
-
-
         cy.get('.create-a-new-site').click();
         cy.get('.modal--onepage').should('be.visible');
         cy.get('.modal--onepage').find('.close').click();
@@ -48,7 +46,6 @@ describe('Sites listing test', () => {
     });
 
     it("publish a site",() => {
-
         cy.get(unublishedListSelector).find('.switch-sites').click();
         cy.get(publishedListSelector).should('exist');
     });

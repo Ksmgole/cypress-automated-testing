@@ -1,4 +1,9 @@
-class VerisignHelper {
+class verisignHelper {
+    static getDeviceSize()
+    {
+        let sizes = ['iphone-6','ipad-2','macbook-15'];
+        return sizes;
+    }
     static getIndonesianPricingCountryCode()
     {
             return 'IDR';
@@ -103,5 +108,4 @@ class VerisignHelper {
    
 }
 
-
-export default VerisignHelper
+export default verisignHelper
