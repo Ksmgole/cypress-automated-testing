@@ -1,25 +1,20 @@
-import VerisignHelper from '../verisignHelper'
+import verisignHelper from '../verisignHelper'
 
-let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
+var device = verisignHelper.getDeviceSize();
 
-describe('Verisign Campaign Testflow 2 - Pricing page for Indonesia',()=>{
-
-    sizes.forEach((size) => {
-
-        before(function() {
+device.forEach((size) => {
+    
+    describe('Testing Indonesian-Verisign Tfb pricing page on device: '+size,()=>{
+        beforeEach(function(){
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndonesianTfbPricingPageUrl());
-        });
-
-        it('testing on '+size, () => {
-
+            cy.visit(verisignHelper.getIndonesianTfbPricingPageUrl());
         })
         it('should have 5 Days Trial', () => {
-            cy.get('.pv-section h1.pv-title').contains(VerisignHelper.getVerisignTrial())
+            cy.get('.pv-section h1.pv-title').contains(verisignHelper.getVerisignTrial())
         })
         it('should have .com, .net, .org or .cc domain extensions',() => {
             cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
@@ -33,36 +28,30 @@ describe('Verisign Campaign Testflow 2 - Pricing page for Indonesia',()=>{
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
                 cy.contains('PROMOSI')
                 cy.contains('diskon 73% di')
-                cy.contains(VerisignHelper.getPagevampPriceForIndonesia())
+                cy.contains(verisignHelper.getPagevampPriceForIndonesia())
 
             })
         })
         it('should display price IDRRp551.160', () => {
             cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
-                cy.contains(VerisignHelper.getIndonesianPricingCountryCode())
-                cy.contains(VerisignHelper.getIndonesianCurrencySymbol())
-                cy.contains(VerisignHelper.getIndonesianCampaignPrice())
+                cy.contains(verisignHelper.getIndonesianPricingCountryCode())
+                cy.contains(verisignHelper.getIndonesianCurrencySymbol())
+                cy.contains(verisignHelper.getIndonesianCampaignPrice())
             })
-        })
-    });
-})
+        })  
+    })
 
-describe('Verisign Campaign Testflow 2- Pricing page for India',()=>{
-
-    sizes.forEach((size) => {
-        before(function() {
+    describe('Testing Indian-Verisign Tfb pricing page on device: ' +size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
                 cy.viewport(size)
             }
-            cy.visit(VerisignHelper.getIndianTfbPricingPageUrl());
+            cy.visit(verisignHelper.getIndianTfbPricingPageUrl());
         });
-
-        it('testing on '+size, () => {
-        })
         it('should have 5 Days Trial', () => {
-            cy.get('.pv-section h1.pv-title').contains(VerisignHelper.getVerisignTrial())
+            cy.get('.pv-section h1.pv-title').contains(verisignHelper.getVerisignTrial())
         })
         it('should have .com, .net, .org or .cc domain extensions',() => {
             cy.get('.pv-section .plan-box .plan-box__list').within(() =>{
@@ -76,15 +65,15 @@ describe('Verisign Campaign Testflow 2- Pricing page for India',()=>{
             cy.get('.pv-section .plan-box h2.plan-box__promotion').within(() => {
                 cy.contains('Promotional')
                 cy.contains('73% discount on')
-                cy.contains(VerisignHelper.getPagevampPriceForIndia())
+                cy.contains(verisignHelper.getPagevampPriceForIndia())
             })
         })
         it('should display price ₹2,760', () => {
             cy.get('.pv-section .plan-box h2.plan-box__pricing').within(() => {
-                cy.contains(VerisignHelper.getIndianPricingCountryCode())
-                cy.contains(VerisignHelper.getIndianCurrencySymbol())
-                cy.contains(VerisignHelper.getIndianTfPrice())
+                cy.contains(verisignHelper.getIndianPricingCountryCode())
+                cy.contains(verisignHelper.getIndianCurrencySymbol())
+                cy.contains(verisignHelper.getIndianCampaignPrice())
             })
         })
-    });
+    })
 })

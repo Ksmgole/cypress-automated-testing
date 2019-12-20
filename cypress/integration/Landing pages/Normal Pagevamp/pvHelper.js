@@ -43,6 +43,11 @@ class pagevampHelper {
     {
         return '+IVA';
     }
+    static getDeviceSize()
+    {
+        let sizes = ['iphone-6','ipad-2',[1500,1000]];
+        return sizes;
+    }
 }
 
 export default pagevampHelper

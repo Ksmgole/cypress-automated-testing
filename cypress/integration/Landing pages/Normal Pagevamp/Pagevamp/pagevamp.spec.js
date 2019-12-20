@@ -1,12 +1,11 @@
 import pagevampHelper from '../pvHelper'
 
-let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
+var device = pagevampHelper.getDeviceSize();
 
-describe('Pagevamp Landing page - index page',()=>{
+device.forEach((size) => {
 
-    sizes.forEach((size) => {
-
-        before(function() {
+    describe('Pagevamp Landing page - index page on device: '+size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
@@ -14,10 +13,6 @@ describe('Pagevamp Landing page - index page',()=>{
             }
             cy.visit(pagevampHelper.getPagevampUrl());
         });
-
-        it('testing on '+size, () => {
-
-        })
         it('should have .com domain extension in feature section',() => {
             cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-domain')
         })
@@ -36,23 +31,18 @@ describe('Pagevamp Landing page - index page',()=>{
                 cy.contains("Includes a free domain")
                 cy.contains("Domain is $12/year")
             })
-        })
-       
-    });
-})
+        }) 
+    })
 
-describe('Pagevamp landing page - pricing page',()=>{
 
-    sizes.forEach((size) => {
-        before(function() {
+    describe('Pagevamp landing page - pricing page on device: '+size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
                 cy.viewport(size)
             }
             cy.visit(pagevampHelper.getPagevampPricingPageUrl());
-        });
-        it('testing on'+size, () => {
         })
         it('should have 14 Days Trial',() => {
             cy.get('.pv-section .pv-title').contains(pagevampHelper.getNormalPagevampTrial())
@@ -70,5 +60,5 @@ describe('Pagevamp landing page - pricing page',()=>{
                 cy.contains("Domain is $12/year")
             })
         })
-    });
+    })
 })
