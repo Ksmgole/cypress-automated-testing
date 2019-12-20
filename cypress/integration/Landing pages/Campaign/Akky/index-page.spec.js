@@ -1,24 +1,19 @@
 import akkyHelper from './akkyHelper';
 
 
-let sizes = ['iphone-6', 'ipad-2',[1500,1000]];
+var device = akkyHelper.getDeviceSize();
 
-describe('Akky Landing page - index page',()=>{
+device.forEach((size) => {
 
-    sizes.forEach((size) => {
-
-        before(function() {
+    describe('Akky Landing page - index page on device: '+size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
-                cy.viewport(size[0], size[1], size[2])
+                cy.viewport(size[0], size[1])
             } else {
                 cy.viewport(size)
             }
             cy.visit(akkyHelper.getAkkyUrl());
         });
-
-        it('Testing on device >> '+ size, () => {
-
-        })
         it('should have Akky logo', () => {
             cy.get('.pv-section .container .pv-cnt .pv-cnt__img .pvg-mx')
             cy.get('#topmost-nav .navbar-header a.pv-logo--sponsr').should('have.attr', 'href', 'https://www.akky.mx/jsf/static_content/pagevamp/index.jsf?lng=es')    
@@ -52,6 +47,5 @@ describe('Akky Landing page - index page',()=>{
         it('should have Akky support link in intercom',() => {
             cy.get('.pv-support a.link-txt--white').should('have.attr','href','http://www.ayudaenlineapagevamp.mx/onlinehelp/offline.php?LANGUAGE=es')
         })
-    
-    });
+    })
 })

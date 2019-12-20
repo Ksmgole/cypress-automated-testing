@@ -1,47 +1,27 @@
 class verisignHelper {
-    static getDeviceSize()
-    {
-        let sizes = ['iphone-6','ipad-2','macbook-15'];
-        return sizes;
-    }
     static getIndonesianPricingCountryCode()
     {
-            return 'IDR';
-    }
-    static getIndonesianCurrencySymbol()
-    {
-            return 'Rp';
-    }
-    static getIndonesianCampaignPrice(){
-            return '551.160';
+        return 'IDR';
     }
     static getIndianPricingCountryCode()
     {
-            return 'INR';
+        return 'INR';
+    }
+    static getIndonesianCurrencySymbol()
+    {
+        return 'Rp';
     }
     static getIndianCurrencySymbol()
     {
-            return '₹';
+        return '₹';
     }
-    static getIndianCfPrice()
+    static getIndonesianCampaignPrice()
     {
-            return '850';
+        return '551.160';
     }
-    static getIndianTfPrice()
+    static getIndianCampaignPrice()
     {
-            return '2,760';
-    }
-        static getUsYearlyPrice()
-    {
-        return '12';
-    }
-    static getNormalPagevampTrial()
-    {
-        return '14';
-    }
-    static getVerisignTrial()
-    {
-        return '5';
+        return '2,760';
     }
     static getPagevampPriceForIndonesia(){
         return 'Rp 2.041.333 / tahun';
@@ -49,61 +29,79 @@ class verisignHelper {
     static getPagevampPriceForIndia(){
         return '₹ 10,222 / year';
     }
-    static getUsPricingCountryCode()
+
+    static getVerisignTrial()
     {
-            return 'US';
+        return '5';
     }
-    static getDollarCurrencySymbol()
+    static getIndonesianCfUrl()
     {
-            return '$';
-    }
-    static getIndonesianCfUrl(){
             return (Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/?desh=id");
     }
-    static getIndonesianCfPricingPageUrl(){
+    static getIndonesianCfPricingPageUrl()
+    {
             return(Cypress.env("verisign-cf")+Cypress.env("baseUrl")+"/pricing/?desh=id");
     }
-    static getIndonesianTfaUrl(){
+    static getIndonesianTfaUrl()
+    {
             return(Cypress.env("verisign-cf-1")+Cypress.env("baseUrl")+"/?desh=id");
     }
-    static getIndonesianTfaPricingPageUrl(){
+    static getIndonesianTfaPricingPageUrl()
+    {
             return(Cypress.env("verisign-cf-1")+Cypress.env("baseUrl")+"/pricing/?desh=id");
     }
-    static getIndonesianTfbUrl(){
+    static getIndonesianTfbUrl()
+    {
         return(Cypress.env("verisign-cf-2")+Cypress.env("baseUrl")+"/?desh=id");
     }
-    static getIndonesianTfbPricingPageUrl(){
+    static getIndonesianTfbPricingPageUrl()
+    {
         return(Cypress.env("verisign-cf-2")+Cypress.env("baseUrl")+"/pricing/?desh=id");
     }
-    static getIndonesianTfcUrl(){
+    static getIndonesianTfcUrl()
+    {
         return(Cypress.env("verisign-cf-3")+Cypress.env("baseUrl")+"/?desh=id");
     }
-    static getIndonesianTfcPricingPageUrl(){
+    static getIndonesianTfcPricingPageUrl()
+    {
         return(Cypress.env("verisign-cf-3")+Cypress.env("baseUrl")+"/pricing/?desh=id");
     }
-    static getIndianCfUrl(){
+    static getIndianCfUrl()
+    {
             return(Cypress.env("verisign-cf")+ Cypress.env("baseUrl")+"/?desh=in");
     }
-    static getIndianCfPricingPageUrl(){
+    static getIndianCfPricingPageUrl()
+    {
             return (Cypress.env("verisign-cf")+ Cypress.env("baseUrl")+"/pricing/?desh=in");
     }
-    static getIndianTfaUrl(){
+    static getIndianTfaUrl()
+    {
             return(Cypress.env("verisign-cf-1")+ Cypress.env("baseUrl")+"/?desh=in");
     }
-    static getIndianTfaPricingPageUrl(){
+    static getIndianTfaPricingPageUrl()
+    {
             return(Cypress.env("verisign-cf-1")+ Cypress.env("baseUrl")+"/pricing/?desh=in");
     }
-    static getIndianTfbUrl(){
+    static getIndianTfbUrl()
+    {
         return(Cypress.env("verisign-cf-2")+ Cypress.env("baseUrl")+"/?desh=in");
     }
-    static getIndianTfbPricingPageUrl(){
+    static getIndianTfbPricingPageUrl()
+    {
         return(Cypress.env("verisign-cf-2")+ Cypress.env("baseUrl")+"/pricing/?desh=in");
     }
-    static getIndianTfcUrl(){
+    static getIndianTfcUrl()
+    {
         return(Cypress.env("verisign-cf-3")+ Cypress.env("baseUrl")+"/?desh=in");
     }
-    static getIndianTfcPricingPageUrl(){
+    static getIndianTfcPricingPageUrl()
+    {
         return(Cypress.env("verisign-cf-3")+ Cypress.env("baseUrl")+"/pricing/?desh=in");
+    }
+    static getDeviceSize()
+    {
+        let sizes = ['iphone-6','ipad-2',[1500,1000]];
+        return sizes;
     }
    
 }

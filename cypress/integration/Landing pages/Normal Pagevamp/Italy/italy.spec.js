@@ -1,12 +1,11 @@
 import pagevampHelper from '../pvHelper'
 
-let sizes = ['iphone-6', 'ipad-2','iphone-4',[1500,1000]];
+var device = pagevampHelper.getDeviceSize();
 
-describe('Italian Pagevamp Landing page - index page',()=>{
+device.forEach((size) => {
 
-    sizes.forEach((size) => {
-
-        before(function() {
+    describe('Italian Pagevamp Landing page - index page on device: '+size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
@@ -14,10 +13,6 @@ describe('Italian Pagevamp Landing page - index page',()=>{
             }
             cy.visit(pagevampHelper.getItalianUrl());
         });
-
-        it('testing on '+size, () => {
-
-        })
         it('should have cookie policy banner on top',() => {
             cy.get('.pv-cookie__alert')
         })
@@ -47,13 +42,11 @@ describe('Italian Pagevamp Landing page - index page',()=>{
                 cy.contains('06 888 12168')
             })
         })
-    });
-})
+    })
 
-describe('Italian Pagevamp landing page - pricing page',()=>{
 
-    sizes.forEach((size) => {
-        before(function() {
+describe('Italian Pagevamp landing page - pricing page on device: '+size,()=>{
+        beforeEach(function() {
             if (Cypress._.isArray(size)) {
                 cy.viewport(size[0], size[1])
             } else {
@@ -61,7 +54,8 @@ describe('Italian Pagevamp landing page - pricing page',()=>{
             }
             cy.visit(pagevampHelper.getItalianPricingPageUrl());
         });
-        it('testing on'+size, () => {
+        it('should have 14 Days Trial',() => {
+            cy.get('.pv-section .pv-title').contains(pagevampHelper.getNormalPagevampTrial())
         })
         it('should have €144+IVA yearly plan & €15+IVA monthly plan',() => {
             cy.get('.pv-section h2.plan-box__pricing').within(() =>{
@@ -77,5 +71,5 @@ describe('Italian Pagevamp landing page - pricing page',()=>{
                 cy.contains("Il dominio è €15/anno")  
             })
         })
-    });
+    })
 })

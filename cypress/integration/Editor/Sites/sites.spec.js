@@ -1,4 +1,4 @@
-import Helper from "../helper";
+import Helper from "./helper";
 
 var publishedListSelector = `.published-site-listing-${Helper.getFullAcPageId()}`;
 var unublishedListSelector = `.unpublished-site-listing-${Helper.getFullAcPageId()}`;
@@ -15,7 +15,7 @@ describe('Sites listing test', () => {
         })
     })
 
-    //
+    
     it('check if correct number of pages are listed', () => {
         // cy.get('.published-wrap').find('.col-md-12').its('length').should('eq', 1);
         // after you done then change this

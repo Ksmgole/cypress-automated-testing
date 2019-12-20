@@ -1,6 +1,6 @@
 class Helper {
     static getSiteListingUrl(pageid) {
-        return(Cypress.env("appUrl")+"/account/${pageid}/sites")
+        return(Cypress.env("appUrl")+"account/${pageid}/sites")
     }
 
     static getAppUrl() {
