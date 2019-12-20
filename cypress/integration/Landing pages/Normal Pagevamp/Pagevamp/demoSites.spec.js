@@ -1,7 +1,7 @@
 import pagevampHelper from '../pvHelper'
 
 describe('checking three demo sites',()=>{
-    before(function(){
+    beforeEach(function(){
         cy.visit(pagevampHelper.getPagevampUrl());
     })
  
