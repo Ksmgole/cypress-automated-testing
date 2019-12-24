@@ -1,10 +1,10 @@
-import Pagevamp from "./functions"
+import Pagevamp from "./helper"
 
     describe('Testing Pagevamp Vampflow in Desktop',()=>{
 
         beforeEach(() => {
             cy.login();
-            cy.visit(Pagevamp.getAccountConfirmationUrl());
+            cy.visit(Pagevamp.getMultiPageAccountConfirmationUrl());
             cy.wait(6000);
             cy.get('#input_14').type('666666666');
             cy.get('.vamp-footer button.btn-submitting').click();

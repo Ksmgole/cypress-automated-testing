@@ -1,11 +1,10 @@
 import pagevampHelper from '../pvHelper'
 
-describe('checking three demo sites',()=>{
+describe('Checking Pagevamp three demo sites',()=>{
     beforeEach(function(){
         cy.visit(pagevampHelper.getPagevampUrl());
     })
- 
-    it('checking J&D Expresso site',()=>{
+    it('J&D Expresso site',()=>{
         cy.get('.pv-section-cnt .pv-block-divide a[data-url="https://jdespresso1.pagevamp.com"]').click()
         cy.wait(6000)
         cy.get('#sample-site .modal-body .pv-loading__overlay').should('have.attr','style','display: none;')
