@@ -27,7 +27,6 @@ describe('Testing one page site creation', ()=>{
         cy.get('#input_15').type('Welcome to my page')
         cy.get('.btn-submitting').click()
         cy.wait(4000)      
-        cy.get('h4.ng-binding > .ng-binding').contains('14 days')
         cy.get('.btn-warning').click()
         cy.get('.modal-dialog .modal-footer .btn-warning').click()
         cy.url().should('include','/demo') 
