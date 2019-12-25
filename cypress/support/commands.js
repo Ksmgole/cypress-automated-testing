@@ -34,3 +34,9 @@ Cypress.Commands.add("login",function () {
         }
     })
 });
+
+Cypress.Commands.add(
+    'getInDocument',
+    { prevSubject: 'document' },
+    (document, selector) => Cypress.$(selector, document)
+  )
