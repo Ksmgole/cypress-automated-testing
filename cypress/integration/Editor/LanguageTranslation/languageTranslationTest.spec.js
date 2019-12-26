@@ -1,4 +1,4 @@
-import Pagevamp from "./helperFunctions";
+import Pagevamp from "./helper";
 
 describe('Pagevamp Admin Language Translation',()=>{
 

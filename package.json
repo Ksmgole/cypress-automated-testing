@@ -9,9 +9,10 @@
     "serve": "json-server db.json",
     "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "cypress": "npm run clean-reports; npm run test; npm run after:tests",
+    "cypress-open":"cypress open",
+    "test": "cypress run",
     "reporter": "dogitt",
     "clean-reports": "rm -rf cypress/reports",
-    "test": "npx cypress run",
     "merge-report": "npx mochawesome-merge --reportDir cypress/reports",
     "generate-report": "npx mochawesome-report-generator --reportDir cypress/reports/separate-reports/mochawesome.json",
     "after:tests": "npm run merge-report; npx marge cypress/reports/mochawesome.json"

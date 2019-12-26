@@ -1,4 +1,4 @@
-import pagevampHelper from './pvHelper'
+import pagevampHelper from '../pvHelper'
 
 describe('Checking Landing Page Translation',() => {
     before(function(){
