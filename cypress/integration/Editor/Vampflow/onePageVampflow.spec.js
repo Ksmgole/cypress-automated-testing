@@ -3,17 +3,17 @@
 import Pagevamp from './helper'
 
 describe('Testing one page site creation', ()=>{
-    before(()=>{
+    beforeEach(function(){
         cy.login()
         cy.visit(Pagevamp.getOnePageAccountConfirmationUrl())
-        cy.wait(3000)
+        cy.wait(4000)
     })
-    // it('Checking that user emails and site_language are prefilled in Account confirmation details',()=>{
-    //     cy.get('#input_8').should('have.value','ujwal@pagevamp.com')
-    //     cy.get('#select_value_label_4').contains('English (US)')
-    //     cy.get('#input_7').should('have.value', '')
-    //     cy.get('#select_5').should('have.attr','aria-label','Business category')
-    // })
+    it('Checking that user emails and site_language are prefilled in Account confirmation details',()=>{
+        Pagevamp.getFacebookEmail('ujwal@pagevamp.com')
+        Pagevamp.getSiteLanguage('English (US)')
+        Pagevamp.getWebsiteTitle('')
+        Pagevamp.getBusinessCategory('Business category')
+    })
     it('Input Business details >> Skips Domain setup >> Demo page',()=>{
         cy.get('#select_5').click().then(($click)=>{
             cy.get('.md-select-menu-container #select_option_31').click()
