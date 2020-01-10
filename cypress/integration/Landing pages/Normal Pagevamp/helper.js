@@ -164,6 +164,17 @@ class pv {
     {
         return('https://www.zoho.com/mail/')
     }
+    static getJdespressoSiteLink(){
+        return ('https://jdespresso1.pagevamp.com')
+    }
+    static getGlamourSiteLink()
+    {
+        return('https://glamourbylr1.pagevamp.com')
+    }
+    static getMeetSocialGrillSiteLink()
+    {
+        return('https://meetsocialgrill1.pagevamp.com')
+    }
 }
 
 export default pv

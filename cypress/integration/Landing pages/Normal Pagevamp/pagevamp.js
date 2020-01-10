@@ -632,6 +632,13 @@ class pvLandingpage{
         cy.get('#continue-with-facebook').should('be.visible')
         cy.get('#pv-continue-modal .close').click()
     }
+    static checkLanguage(Lang, text){
+        cy.get('#topmost-nav .navbar-right .dropdown-toggle').click()
+        cy.contains(Lang).click()
+        cy.get('.pv-banner .pv-title').contains(text)
+
+
+    }
 }
 
 export default pvLandingpage
