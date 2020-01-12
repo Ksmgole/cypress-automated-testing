@@ -1,6 +1,6 @@
 {
   "env": {
-    "baseUrl": "pagevamp.com",
+    "baseUrl": "pagevamp.com/",
     "appUrl":"https://app.pvdemo.com/",
     "apiUrl" : "https://api.pvdemo.com/",
     "test_users_id": "51131",
