@@ -1,6 +1,7 @@
-# Build and test an application using Cypress
+#Introduction
+This repository is for the automation testing for Pagevamp Landing pages components.
 
-This repository is the starting point for an official Cypress tutorial. We encourage you to clone this repo and follow along.
+#Installation
 - git clone {repo-url}
 - go to the directory then command "npm install"
 - in package.json file => add "cypress":"cypress open"
